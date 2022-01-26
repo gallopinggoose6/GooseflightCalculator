@@ -4,7 +4,7 @@
 static float sqrarg;
 #define SQR(a) ((sqrarg=(a)) == 0.0 ? 0.0 : sqrarg * sqrarg)
 
-statid double dsqrarg;
+static double dsqrarg;
 #define DSQR(a) ((dsqrarg=(a)) == 0.0 ? 0.0 : dsqrarg*dsqrarg)
 
 static double dmaxarg1, dmaxarg2;
@@ -33,7 +33,7 @@ static int iminarg1, iminarg2;
 
 #define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
 
-#if defined(__STDC__) || defined(ANSI || defined(NRANSI) /* ANSI */
+#if defined(__STDC__) || defined(ANSI) || defined(NRANSI) /* ANSI */
 
 		void nerror(char error_text[]);
 		double *vector(long nl, long nh);
