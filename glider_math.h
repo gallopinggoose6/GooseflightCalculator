@@ -61,3 +61,27 @@ void gcf(double *gammcf, double a, double x, double *gln);
 */
 
 double gammln(double xx);
+
+/*
+ * Using the Newton_Raphson method, find the root of a function known to lie in the interval
+ * [x1, x2]. The root rtnewt will be refined until its accuracy is known within +- xacc.
+ * funcd is a user-supplied routine that returns both the function value and the first
+ * derivative of the function at the point x.
+ *
+ * This function has been modified to only calculate linear roots
+ *
+ * Same information as above regarding function origin
+ * Page 365
+ *
+*/
+
+double rtnewt(double m, double b, double x1, double x2, double xacc);
+
+/*
+ * Find Minimum Value in an Array and return Index
+ *  
+ * This function is not from NUMERICAL RECIPES IN C
+ *
+*/
+
+unsigned find_min(double *arr, unsigned numEntries);
